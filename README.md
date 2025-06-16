@@ -6,7 +6,11 @@ index.html
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>TurboFrog - The Most Degen Coin of 2025</title>
   <style>
-    body {
+    body { <div class="button-container">
+  <a href="https://pump.fun/GpvtYNnfKcUa87iexNBp8CbbhJXzRfotSr3Mhv4wpumpt" target="_blank" class="buy-button">
+    💸 Buy on Pump.fun 🚀
+  </a>
+</div>
       background-color: #0f0f0f;
       color: #00ff99;
       font-family: 'Comic Sans MS', cursive, sans-serif;
@@ -61,7 +65,43 @@ index.html
       from { opacity: 1; }
       to { opacity: 0.4; }
     }
-  </style>
+  </style> .button-container {
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+}
+
+.buy-button {
+  background-color: #ff00ff;
+  color: white;
+  font-size: 1.8rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  animation: glow 1.5s infinite ease-in-out;
+  box-shadow: 0 0 15px #ff00ff88;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.buy-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 25px #ff00ffcc;
+}
+
+/* 🔮 Effetto Glow continuo */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 10px #ff00ff80;
+  }
+  50% {
+    box-shadow: 0 0 25px #ff00ffcc;
+  }
+  100% {
+    box-shadow: 0 0 10px #ff00ff80;
+  }
+}
 </head>
 <body> <body>
   <!-- Altri contenuti del sito -->
