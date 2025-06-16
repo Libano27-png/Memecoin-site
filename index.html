@@ -6,75 +6,97 @@ index.html<!DOCTYPE html>
   <title>TurboFrog – The Most Degen Coin of 2025</title>
   <style>
     body {
-      background-color: #0d0d0d;
-      font-family: 'Courier New', Courier, monospace;
-      color: #00ff99;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Courier New', monospace;
       text-align: center;
+      margin: 0;
+      padding: 40px 20px;
     }
 
     h1 {
       font-size: 3em;
-      color: #9900ff;
-      text-shadow: 0 0 10px #9900ff;
-      margin-bottom: 20px;
+      color: #a020f0;
+      text-shadow: 0 0 15px #a020f0;
+      margin-bottom: 10px;
+    }
+
+    .rocket {
+      font-size: 2em;
+    }
+
+    .frog-emoji {
+      font-size: 3em;
+      margin: 10px 0;
     }
 
     .button-container {
-      background-color: #1a1a1a;
-      border: 2px solid #00ff99;
-      border-radius: 15px;
-      padding: 30px;
-      box-shadow: 0 0 20px #00ff99;
-      transition: all 0.3s ease-in-out;
+      margin-top: 30px;
     }
 
-    .button-container:hover {
-      box-shadow: 0 0 30px #9900ff;
-    }
-
-    a.buy {
-      background-color: #00ff99;
-      color: #0d0d0d;
+    .buy-button {
+      font-size: 1.5em;
       padding: 15px 30px;
+      background-color: #a020f0;
+      border: 2px solid #00ffcc;
+      border-radius: 15px;
+      color: #fff;
+      cursor: pointer;
       text-decoration: none;
-      font-weight: bold;
-      border-radius: 10px;
+      box-shadow: 0 0 30px #a020f0, 0 0 20px #00ffcc inset;
+      transition: transform 0.2s;
+      display: inline-block;
+    }
+
+    .buy-button:hover {
+      transform: scale(1.05);
+    }
+
+    /* Counter styles */
+    .counter-container {
+      margin-top: 40px;
+      text-align: center;
+      color: #39ff14;
+      font-family: 'Courier New', monospace;
+      text-shadow: 0 0 10px #39ff14;
+    }
+
+    .counter-label {
       font-size: 1.2em;
-      box-shadow: 0 0 10px #00ff99;
-      transition: all 0.3s ease;
-      animation: pulse 1.5s infinite;
+      margin-bottom: 5px;
     }
 
-    a.buy:hover {
-      background-color: #9900ff;
-      color: white;
-      box-shadow: 0 0 20px #9900ff;
-    }
-
-    @keyframes pulse {
-      0% {
-        box-shadow: 0 0 10px #00ff99;
-      }
-      50% {
-        box-shadow: 0 0 20px #9900ff;
-      }
-      100% {
-        box-shadow: 0 0 10px #00ff99;
-      }
+    .counter {
+      font-size: 1.8em;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
-  <h1>🚀 TurboFrog 🐸</h1>
+
+  <div class="rocket">🚀</div>
+  <h1>TurboFrog</h1>
+  <div class="frog-emoji">🐸</div>
+
   <div class="button-container">
-    <a class="buy" href="https://pump.fun/CnytVNeKello87iezNBp8CbbhJYzRfotSr3Mhv4w" target="_blank">Buy Now 🚀</a>
+    <a href="https://pump.fun/..." target="_blank" class="buy-button">Buy Now 🚀</a>
   </div>
+
+  <div class="counter-container">
+    <p class="counter-label">Total TurboFrog Sold:</p>
+    <p class="counter" id="frogCounter">27,493,300 🐸</p>
+  </div>
+
+  <script>
+    let counter = 27493300;
+
+    function updateCounter() {
+      counter += Math.floor(Math.random() * 10); // incremento casuale
+      document.getElementById("frogCounter").textContent = counter.toLocaleString() + " 🐸";
+    }
+
+    setInterval(updateCounter, 200);
+  </script>
+
 </body>
 </html>
